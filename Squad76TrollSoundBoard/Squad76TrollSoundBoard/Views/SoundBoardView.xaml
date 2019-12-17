@@ -1,0 +1,53 @@
+﻿<Window x:Class="Squad76TrollSoundBoard.Views.SoundBoardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Squad 76 Trolling Soundboard - Tazmar" 
+        xmlns:viewModels="clr-namespace:Squad76TrollSoundBoard.ViewModels"
+        Height="450"
+        Width="500"
+        d:DataContext="{d:DesignInstance viewModels:SoundBoardViewModel}"
+        KeyDown="Window_KeyDown"
+        Background="Black">
+    
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Menu Background="Black">
+            <MenuItem Header="File" 
+                      Background="Black" 
+                      Foreground="White">
+
+                <MenuItem Header="Add New Sound Group" 
+                          Foreground="Black" 
+                          Command="{Binding Path=AddNewSoundGroupCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <DataGrid Grid.Row="1" 
+                  Background="Black" 
+                  HeadersVisibility="None" 
+                  ItemsSource="{Binding Path=Sounds}">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=FileName}" 
+                                    Width="auto" 
+                                    Foreground="White"/>
+                
+                <DataGridTextColumn Binding="{Binding Path=LengthInSeconds}" 
+                                    Width="*" 
+                                    Foreground="White"/>
+                
+                <DataGridTextColumn Binding="{Binding Path=KeyBinding}" 
+                                    Width="auto"
+                                    Foreground="White"/>
+                <DataGridTextColumn />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

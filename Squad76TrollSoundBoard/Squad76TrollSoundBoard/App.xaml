@@ -1,0 +1,9 @@
+﻿<Application x:Class="Squad76TrollSoundBoard.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Squad76TrollSoundBoard"
+             Startup="AppStartup">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
