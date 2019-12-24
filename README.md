@@ -1,2 +1,2 @@
-# Squad76Troll
-Windows sound board for trolling in Cod MW
+# Sound Board Console App
+Console app designed to keybind sounds to your keyboard.
