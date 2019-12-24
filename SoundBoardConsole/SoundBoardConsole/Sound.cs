@@ -1,10 +1,9 @@
-﻿namespace Squad76TrollSoundBoard.Models
+﻿namespace SoundBoardConsole
 {
-    public class SoundModel
+    public class Sound
     {
         public string Path { get; set; }
         public string Name { get; set; }
-        public string GroupName { get; set; }
         public string KeyBinding { get; set; }
     }
 }
